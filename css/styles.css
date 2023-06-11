@@ -614,6 +614,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 72px;
+  padding-left: 0;
 }
 .advantages {
   padding-top: 96px;
@@ -651,6 +652,9 @@ body {
     width: calc((100% - 24px) / 2);
     margin-bottom: 0;
     /* width: 50%; */
+  }
+  .advantages-title{
+   text-align: start;
   }
 }
 /* //////////////////// advantages DESKTOP////////////////////// */
@@ -862,13 +866,18 @@ body {
   line-height: 1.1;
 }
 .customers-list {
-  width: 396px;
+  
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   row-gap: 72px;
   column-gap: 16px;
+}
+@media screen and (min-width: 428px){
+  .customers-list{
+    width: 396px;
+  }
 }
 .customers-list-item {
   height: 88px;
@@ -932,6 +941,7 @@ body {
 }
 
 /* ////////////////  FOOTER   ///////////////// */
+
 .footer {
   background-color: var(--navy-blue-color);
   padding-top: 96px;
@@ -1011,19 +1021,17 @@ body {
 
 .footer-form-wrapper {
   /*   margin-left: 80px; */
+  margin: 0 auto;
 }
 
 .footer-form {
   display: flex;
   flex-direction: column;
-  /*  justify-content: center;
-  justify-items: center; */
   gap: 24px;
 }
 
 .footer-form-subscribe-input {
-  /*  width: 264px; */
-  width: 398px;
+   width: 280px;
   height: 40px;
   border: 1px solid #ffffff;
   background-color: transparent;
@@ -1042,6 +1050,14 @@ body {
   padding-bottom: 8px;
   line-height: 1.5;
 }
+
+
+@media screen and (min-width: 428px){
+  .footer-form-subscribe-input{
+    width: 398px;
+  } 
+}
+
 .footer-form-subscribe-input::placeholder {
   color: #ffffff;
 }
@@ -1075,6 +1091,11 @@ body {
   .footer-wrapper {
     flex-direction: row;
     gap: 24px;
+    margin: 0;
+   
+  }
+  .footer-form-wrapper {
+  
     margin: 0;
   }
   .footer-form-subscribe-input {
@@ -1147,7 +1168,7 @@ body {
 .modal {
   padding: 72px 24px 24px 24px;
   min-height: 576px;
-  width: 408px;
+  width: 305px;
   background: var(--dairy-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1157,6 +1178,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (min-width: 428px){
+  .modal{
+    width: 408px;
+  }
+}
+
 
 .modal-close-btn {
   padding: 0;
@@ -1334,7 +1361,6 @@ body {
 /* //////////////////////////////////////Portfolio //////////////////////////////////////////*/
 
 .portfolio {
-/*   padding: 96px 0 120px; */
 padding: 48px 0 48px;
 }
 .portfolio-title {
@@ -1412,8 +1438,15 @@ padding: 48px 0 48px;
   justify-content: center;
 }
 .portfolio-card-item {
+  width: 300px;
  /*  width: calc((100% - 48px) / 3); */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+@media screen and (min-width: 428px){
+  .portfolio-card-item{
+    width: 360px;
+  }
+
 }
 .portfolio-card-link {
   display: block;
