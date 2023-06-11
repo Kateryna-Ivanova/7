@@ -21,15 +21,13 @@
 </head>
 
 <body>
-    <!-- <div class="container-basic">  container-basic -->
     <header class="header">
-        <div class="container container-header"> <!-- container-header -->
+        <div class="container container-header">
+            <a class="logo link" href="./index.html">Web<span class="logo-dark">Studio</span></a>
             <nav class="nav-header">
-                <a class="logo link" href="./index.html">Web<span class="logo-dark">Studio</span></a>
                 <ul class="list meny-list">
-                    <li class="meny-item"><a class="meny-link link " href="./index.html">Studio</a></li>
-                    <li class="meny-item"><a class="meny-link link current" href="./portfolio.html">Portfolio</a>
-                    </li>
+                    <li class="meny-item "><a class="meny-link current link " href="./index.html">Studio</a></li>
+                    <li class="meny-item"><a class="meny-link link" href="./portfolio.html">Portfolio</a></li>
                     <li class="meny-item"><a class="meny-link link" href="">Contacts</a></li>
                 </ul>
             </nav>
@@ -44,9 +42,73 @@
                     </li>
                 </ul>
             </address>
-        </div> <!-- ///container-header -->
-    </header>
 
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg fill="#2E2F42" width="30" height="30">
+                    <use href="./images/icons.svg#icon-burger-icon"></use>
+                </svg>
+            </button>
+
+        </div>
+    </header>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="modal-close-btn menu-toggle js-close-menu">
+<svg class="cross-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-cross"></use>
+            </svg> 
+        </button>
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-list-li"><a class="mobile-menu-list-link" href="./index.html">Studio</a> </li>
+            <li class="mobile-menu-list-li"><a class="mobile-menu-list-link" href="./portfolio.html">Portfolio</a></li>
+            <li class="mobile-menu-list-li "><a href="" class="mobile-menu-list-link-blue">Contacts</a></li>
+        </ul>
+        <ul class="list mobile-address-list">
+            <li class="mobile-address-item-tel"><a class="mobile-address-link-tel link"
+                    href="tel:+110001111111">+11(000)111-11-11
+                </a>
+            </li>
+            <li class="mobile-address-item-link-mail ">
+                <a class="mobile-address-mail link" href="mailto:info@devstudio.com">info@devstudio.com
+                </a>
+            </li>
+        </ul>
+        <ul class="social-list-mobile list">
+
+            <li class="social-list-item">
+                <a href="#" class="social-list-link link">
+                    <svg class="social-list-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link link">
+                    <svg class="social-list-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a class="social-list-link link">
+                    <svg class="social-list-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-list-item">
+                <a href="#" class="social-list-link link">
+                    <svg class="social-list-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+
+
+        <!--      <ul class="mobile-menu">
+                 
+                            </ul> -->
+    </div>
 
 
 
@@ -83,7 +145,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/cashless-payment.jpg" alt="cashless payment"
+                                <img srcset="./images/img-portfolio/cashless-payment.jpg 1x, ./images/img-portfolio/cashless-payment-2x.jpg 2x" src="./images/img-portfolio/cashless-payment.jpg" alt="cashless payment"
                                     width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -101,7 +163,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/meditation-app.jpg" alt="meditation app" width="360">
+                                <img srcset="./images/img-portfolio/meditation-app.jpg 1x, ./images/img-portfolio/meditation-app-2x.jpg 2x" src="./images/img-portfolio/meditation-app.jpg" alt="meditation app" width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                                 </p>
@@ -117,7 +179,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/taxi-service.jpg" alt="taxi service" width="360">
+                                <img srcset="./images/img-portfolio/taxi-service.jpg 1x, ./images/img-portfolio/taxi-service-2x.jpg 2x" src="./images/img-portfolio/taxi-service.jpg" alt="taxi service" width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                                 </p>
@@ -133,7 +195,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/screen-illustrations.jpg" alt="screen illustrations"
+                                <img srcset="./images/img-portfolio/screen-illustrations.jpg 1x, ./images/img-portfolio/screen-illustrations-2x.jpg 2x" src="./images/img-portfolio/screen-illustrations.jpg" alt="screen illustrations"
                                     width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -151,7 +213,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/online-courses.jpg" alt="online courses" width="360">
+                                <img srcset="./images/img-portfolio/online-courses.jpg 1x, ./images/img-portfolio/online-courses-2x.jpg 2x" src="./images/img-portfolio/online-courses.jpg" alt="online courses" width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                                 </p>
@@ -167,7 +229,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/instagram-stories.jpg" alt="instagram stories"
+                                <img srcset="./images/img-portfolio/instagram-stories.jpg 1x, ./images/img-portfolio/instagram-stories-2x.jpg 2x" src="./images/img-portfolio/instagram-stories.jpg" alt="instagram stories"
                                     width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
@@ -185,7 +247,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/organic-food.jpg" alt="organic food" width="360">
+                                <img srcset="./images/img-portfolio/organic-food.jpg 1x, ./images/img-portfolio/organic-food-2x.jpg 2x" src="./images/img-portfolio/organic-food.jpg" alt="organic food" width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                                 </p>
@@ -201,7 +263,7 @@
                     <li class="portfolio-card-item link">
                         <a class="portfolio-card-link link" href="#">
                             <div class="portfolio-img-wrapper">
-                                <img src="./images/img-portfolio/fresh-coffee.jpg" alt="fresh coffee" width="360">
+                                <img srcset="./images/img-portfolio/fresh-coffee.jpg 1x, ./images/img-portfolio/fresh-coffee-2x.jpg 2x" src="./images/img-portfolio/fresh-coffee.jpg" alt="fresh coffee" width="360">
                                 <p class="overlay">14 Stylish and User-Friendly App Design Concepts · Task Manager App ·
                                     Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                                 </p>
@@ -223,48 +285,51 @@
     </main>
     <footer class="footer link">
         <div class="container footer-content">
-            <div class="call-to-action ">
-                <a class="logo logo-footer link" href="./index.html">Web <span class="logo-light"> Studio</span></a>
-                <p class="footer-text">Increase the flow of customers and sales for your business with digital
-                    marketing
-                    & growth solutions.</p>
+            <div class="footer-wrapper">
+                <div class="call-to-action ">
+                    <a class="logo logo-footer link" href="./index.html">Web <span class="logo-light"> Studio</span></a>
+                    <p class="footer-text">Increase the flow of customers and sales for your business with digital
+                        marketing
+                        & growth solutions.</p>
+                </div>
+                <div class="social-media social-media-footer">
+                    <p class="social-media-text">Social media</p>
+
+                    <ul class="social-list list social-list-footer">
+                        <li class="social-list-item social-list-item-footer">
+                            <a href="#" class="social-list-link link footer-social-list-link">
+                                <svg class="social-list-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list-item social-list-item-footer">
+                            <a class="social-list-link link footer-social-list-link">
+                                <svg class="social-list-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list-item social-list-item-footer">
+                            <a class="social-list-link link footer-social-list-link">
+                                <svg class="social-list-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list-item social-list-item-footer">
+                            <a href="#" class="social-list-link link footer-social-list-link">
+                                <svg class="social-list-icon" width="24" height="24">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
             </div>
-            <div class="social-media">
-                <p class="social-media-text">Social media</p>
 
-                <ul class="social-list list social-list-footer">
-                    <li class="social-list-item social-list-item-footer">
-                        <a href="#" class="social-list-link link footer-social-list-link">
-                            <svg class="social-list-icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-list-item social-list-item-footer">
-                        <a class="social-list-link link footer-social-list-link">
-                            <svg class="social-list-icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-list-item social-list-item-footer">
-                        <a class="social-list-link link footer-social-list-link">
-                            <svg class="social-list-icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="social-list-item social-list-item-footer">
-                        <a href="#" class="social-list-link link footer-social-list-link">
-                            <svg class="social-list-icon" width="24" height="24">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-
-
-            </div>
             <div class="footer-form-wrapper">
                 <p class="social-media-text">Subscribe</p>
                 <form class="footer-form">
@@ -282,15 +347,17 @@
                     </button>
                 </form>
 
-            </div><!-- footer-form-wrapper -->
+            </div>
 
-        </div><!-- container footer-content -->
+        </div>
 
     </footer>
 
-    <!--     </div>  ///container-basic -->
-
-
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
