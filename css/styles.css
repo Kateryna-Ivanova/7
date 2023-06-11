@@ -16,10 +16,16 @@
 }
 
 body {
+  display: block;
   font-family: Roboto, sans-serif;
   color: var(--slat-color);
   background-color: var(--white-color);
 }
+
+.body{
+  min-width: 320px;
+}
+
 :root {
   --slat-color: #434455;
   --transition-duration-and-funk: 500ms linear;
@@ -483,11 +489,17 @@ body {
   background-position: center;
   background-size: cover;
   /* height: 600px; */
-  max-width: 767px;
+  min-width: 295px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
   justify-items: center;
+}
+@media screen and (min-width: 428px){
+  .hero{
+    /* max-width: 767px; */
+    min-width: 428px;
+  }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 428px),
   (min-resolution: 192dpi) and (min-width: 428px),
