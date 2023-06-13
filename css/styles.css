@@ -66,6 +66,11 @@ a {
 }
 ul {
   list-style: none;
+  margin: 0;
+}
+.list {
+  list-style: none;
+  margin: 0;
 }
 /* ====================HEDER ================== */
 .container {
@@ -168,8 +173,10 @@ body {
 }
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+/*   min-height: 40px;
+  min-width: 40px; */
+  height: 40px;
+  width: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,11 +246,12 @@ body {
 .mobile-menu-list {
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   margin-bottom: 284px;
   padding-left: 0;
+  line-height:1.1;
+
 }
 .mobile-menu-list-li {
   margin-bottom: 40px;
@@ -258,7 +266,7 @@ body {
 .mobile-address-item-tel {
   font-weight: 700;
   font-size: 22px;
-  line-height: 40px;
+  line-height: 1.8;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--iris-color);
@@ -277,7 +285,7 @@ body {
 .mobile-address-mail {
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: #434455;
 }
@@ -353,15 +361,15 @@ body {
     display: none;
   }
 
-  .container-header {
+ /*  .container-header {
     justify-content: flex-start;
-  }
+  } */
   .container-header .container-header p {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     color: var(--accept-color);
   }
 
@@ -390,7 +398,6 @@ body {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
     color: var(--navy-blue-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -429,7 +436,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--slat-color);
     margin: 0;
@@ -437,7 +444,6 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-
 /* =====================DESKTOP HEDER================== */
 @media screen and (min-width: 1158px) {
   .container {
@@ -448,6 +454,7 @@ body {
   }
   .menu-toggle {
     display: none;
+    
   }
   .address {
     display: block;
@@ -468,7 +475,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--slat-color);
     margin: 0;
@@ -501,9 +508,9 @@ body {
     min-width: 428px;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 428px),
-  (min-resolution: 192dpi) and (min-width: 428px),
-  (min-resolution: 2dppx) and (min-width: 428px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -519,9 +526,8 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
   text-align: center;
-  line-height: 1.11;
+  line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--white-color);
   max-width: 320px;
@@ -543,7 +549,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: var(--white-color);
   align-items: center;
   letter-spacing: 0.04em;
@@ -563,7 +569,7 @@ body {
 
   .hero-title {
     font-size: 56px;
-    line-height: 60px;
+    line-height: 1.07;
     max-width: 496px;
     margin-bottom: 36px;
   }
@@ -593,7 +599,7 @@ body {
   }
   .hero-title {
     font-size: 56px;
-    line-height: 60px;
+    line-height: 1.07;
     margin-bottom: 48px;
     max-width: 496px;
   }
@@ -634,7 +640,7 @@ body {
 }
 .advantages-title {
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -645,7 +651,7 @@ body {
 .advantages-descr {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
@@ -664,6 +670,7 @@ body {
     width: calc((100% - 24px) / 2);
     margin-bottom: 0;
     /* width: 50%; */
+    width: 351px;
   }
   .advantages-title{
    text-align: start;
@@ -697,12 +704,13 @@ body {
   }
   .advantages-title {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.5;
     color: var(--navy-blue-color);
   }
 
   .advantages-descr {
     font-weight: 400;
+    font-size: 15px;
   }
 }
 /* //////////////////// we-doing  DESKTOP////////////////////// */
@@ -721,11 +729,10 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    line-height: 40px;
     color: var(--navy-blue-color);
     text-align: center;
     letter-spacing: 0.02em;
-    line-height: 1.11;
+    line-height: 1.1;
     text-transform: capitalize;
   }
   .doing-list {
@@ -744,12 +751,11 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
   color: var(--navy-blue-color);
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.02em;
-  line-height: 1.11;
+  line-height: 1.1;
 }
 
 .team-subtitle {
@@ -757,13 +763,13 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--navy-blue-color);
 }
 
 .our-team {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--cloud-color);
 }
 .team-title {
@@ -804,7 +810,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--slat-color);
@@ -847,7 +853,13 @@ body {
   }
 }
 /* ////////////////// DESKTOP TEAM ///////// */
+
+
 @media screen and (min-width: 1157px) {
+  .our-team{
+    padding: 120px 0;
+  }
+
   .social-list {
     gap: 24px;
     display: flex;
@@ -869,7 +881,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 40px;
+  
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -994,7 +1006,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   width: 264px;
   color: var(--cloud-color);
@@ -1007,7 +1019,7 @@ body {
 .social-media-text {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white-color);
   margin-bottom: 16px;
@@ -1049,7 +1061,6 @@ body {
   background-color: transparent;
   font-weight: 400;
   font-size: 12px;
-  line-height: 24px;
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
@@ -1235,7 +1246,7 @@ body {
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: var(--navy-blue-color);
   margin-bottom: 16px;
 }
@@ -1345,7 +1356,7 @@ body {
 .link-privacy {
   font-weight: 400;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.3;
   letter-spacing: 0.04em;
   text-decoration-line: underline;
   color: var(--iris-color);
@@ -1360,7 +1371,7 @@ body {
   color: #ffffff;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
@@ -1380,7 +1391,6 @@ padding: 48px 0 48px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 24px;
   color: #2e2f42;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -1400,7 +1410,7 @@ padding: 48px 0 48px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
 }
@@ -1413,16 +1423,11 @@ padding: 48px 0 48px;
     0px 2px 2px rgba(0, 0, 0, 0.12); 
 }
 
-.list {
-  list-style: none;
-}
-
 .portfolio-subtitle {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--slat-color);
   line-height: 1.5;
@@ -1493,7 +1498,7 @@ padding: 48px 0 48px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud-color);
   padding: 40px 32px 0 32px;
